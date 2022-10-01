@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+
+</head>
+<body onload="typeWriter()">
+    <%- include('partials/header'); %>
+    <div id="indexMain">
+      <img class="coverImg" src="<%=img%>" alt="<%=imgAlt%>">
+      <div id="indexMsg">
+        <h1 id="statement"><%=statement%></h1>
+        <p id="msg"></p>
+        <p id="msg2"></p>
+      
+        <form action="/aboutme">
+          <input type="submit" value="More About Me" />
+          </form>
+      </div>
+
+
+      <script>
+      var i = 0;
+
+      var txt = `if ( problem != solved )\n\n { findKarlis(problem => problem.Stated + problem.Solved); }`;
+      var speed = 50;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("msg").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+          
+        }
+
+      }
+
+      </script>
+    <%- include('partials/footer'); %>
+    </div>
+
+
+</body>
+</html>

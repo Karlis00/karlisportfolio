@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+
+</head>
+<body>
+    <%- include('partials/header'); %>
+    <div class="content">
+        <h1><%=page%></h1>
+
+        <div class="card">
+            <img src="<%=serviceIcon1%>" alt="<%=serviceAlt1%>">
+            <h2>Software Engineering</h2>
+        </div>
+        <div class="card">
+            <img src="<%=serviceIcon2%>" alt="<%=serviceAlt2%>">
+            <h2>IT Operation Support</h2>
+        </div>
+        <div class="card">
+            <img src="<%=serviceIcon3%>" alt="<%=serviceAlt3%>">
+            <h2>Digital Marketing</h2>
+        </div>
+        <p><a href="/contact">Contact Me</a> For a Quotation For The Above Services.</p>
+        
+        <%- include('partials/footer'); %>
+    </div>
+
+</body>
+</html>

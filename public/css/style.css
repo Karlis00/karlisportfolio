@@ -1,0 +1,190 @@
+* {box-sizing: border-box;}
+
+body {
+    margin-left: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+#logo {
+    width: 500px;
+    margin-left: 50px;
+}
+
+
+#indexMsg {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 100px;
+    text-align: left;
+}
+
+#indexMsg h1 {
+    padding-bottom: 80px;
+    color: #ae583d;
+    width: 300px;
+    text-align: center;
+}
+
+#indexMsg p {
+    padding-bottom: 30px;
+    text-align: left;
+
+}
+
+
+
+
+nav ul {
+    list-style-type: none;
+    padding:0;
+    border-bottom: 1px solid #b09ead;                
+}
+nav li {
+    text-align: center;
+    border-bottom: 1px solid #EFEFEF;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+a:link, :visited {
+    color: #fef5ff;
+}
+a:hover {
+    color: #B1C1E5;
+}
+
+
+
+
+#form {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#form input {
+    display: block;
+    float: right;
+    margin-right: 80px;
+}
+
+#form img {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#submit {
+    margin-right: 200px;
+
+}
+
+#aboutme h2 {
+    color: #ae583d;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+
+.card {
+    display: inline-block;
+    width: 190px;
+    height: 300px;
+    text-align: center;
+    border: solid 1px;
+    border-image: linear-gradient(158deg, #B1C1E5, #ae583d) 1;
+    margin-bottom: 20px;
+
+}
+
+.card img {
+    width: 100px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#project .card {
+    width: 600px;
+    height: 400px;
+    text-align: left;
+    border: solid 1px;
+    border-image: linear-gradient(158deg, #B1C1E5, #ae583d) 1;
+    padding: 30px;
+    margin-bottom: 20px;
+
+}
+
+#project .card img {
+    width: 300px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    display: block;
+    float: left;
+}
+
+#project .card h3{
+    padding-top: 70px;
+    color: #ae583d;
+}
+
+footer {
+    width: 600px;
+    padding-top: 100px;
+    background-color: #000000;
+    font-size: xx-small;
+}
+
+@media (min-width: 600px) {
+    #logo {
+        width: 300px;
+        display: block;
+        float: left;
+    }
+    .content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        
+    }
+    nav ul {
+        display: block;
+        text-align: right;
+        height: 120px;
+        padding-right: 1.5em;
+
+    }
+    nav li {display: inline-block;
+            width: 7em;
+            margin-top: 1.5em;
+
+            padding: .5em;
+            border: none;
+        }
+    #profilepic {
+        display: block;
+        float: right;
+        width: 300px;
+    }
+    .coverImg {
+        display: block;
+        float: right;
+        width: 50%;
+    }
+    }
+
+
+    

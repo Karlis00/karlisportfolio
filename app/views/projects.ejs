@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+
+</head>
+<body>
+
+    <%- include('partials/header'); %>
+
+    <div class="content">
+    <h1><%=page%></h1>
+    <div id="project">
+    <div class="card">
+        <img src="<%=projectImg1%>" alt="<%=projectAlt1%>">
+        <h3>Nexxus</h3>
+        <p>This is an ongoing project by Coffee Chat Network. I am just participated in the team as an internship learning about ReactJS. I will obtain skills in ReactJS after this project. </p>
+    </div>
+    <div class="card">
+        <img src="<%=projectImg2%>" alt="<%=projectAlt2%>">
+        <h3>Web Design Demo Project: Real Estate Agent</h3>
+        <p>This is a project assignment of my previous Web design course. It shows my skill in HTML and CSS.</p>
+    </div>
+    <div class="card">
+        <img src="<%=projectImg3%>" alt="<%=projectAlt3%>">
+        <h3>Web Design Demo Project: Mobile Services Provider</h3>
+        <p>This is an assignment of my previous Web design course. It shows my skill in HTML and CSS.</p>
+    </div>
+</div>
+    <p><a href="/contact">Contact Me</a> For More Information About My Profession.</p>
+    <%- include('partials/footer'); %>
+    </div>
+
+</body>
+</html>

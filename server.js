@@ -5,7 +5,7 @@ var express = require('./config/express');
 var app = express();
 
 var host = 'localhost';
-var port = 3000;
+var port = process.env.PORT || 5000;
 
 
 app.listen(port);

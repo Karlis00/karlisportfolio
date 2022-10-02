@@ -1,3 +1,10 @@
+/* 
+COMP 229 Assignment 1 - express.js
+Student Name: Kam Hung Chan (Karlis)
+ID: 301232477
+Date: October 2, 2022
+*/
+
 var config = require('./env/development'),
 session = require('express-session'),
 express = require('express'),

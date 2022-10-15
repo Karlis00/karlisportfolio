@@ -72,19 +72,19 @@ a:hover {
 
 
 
-#form {
+.form {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#form input {
+.form input {
     display: block;
     float: right;
     margin-right: 80px;
 }
 
-#form img {
+.form img {
     width: 300px;
     display: block;
     margin-left: auto;
@@ -92,7 +92,7 @@ a:hover {
 
 }
 
-#submit {
+.submit {
     margin-right: 200px;
 
 }

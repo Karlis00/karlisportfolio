@@ -1,0 +1,32 @@
+<% /* 
+COMP 229 Assignment 1 - index.ejs
+Student Name: Kam Hung Chan (Karlis)
+ID: 301232477
+Date: October 2, 2022
+*/ %>
+
+<%- include('partials/head'); %>
+
+<body>
+    <%- include('partials/header'); %>
+    <div class="content">
+    <h1><%=page%></h1>
+    
+        <form class="form" action="/login">
+            <p>
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" required="required" />
+            </p>
+
+            <p>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required="required" />
+            </p>
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+
+        <%- include('partials/footer'); %>
+
+    </div>
+</body>
+</html>

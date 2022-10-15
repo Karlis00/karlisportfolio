@@ -4,17 +4,14 @@ Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
 Date: October 2, 2022
 */ %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <%- include('partials/head'); %>
 
-</head>
+<%- include('partials/head'); %>
+
 <body>
     <%- include('partials/header'); %>
     <div class="content">
     <h1><%=page%></h1>
-    <form id="form" action="mailto:karlischan@gmail.com" method="post">
+    <form class="form" action="mailto:karlischan@gmail.com" method="post">
     <img src=<%=img%> alt=<%=imgAlt%>>
     <p>You can contact me by sending me an email or finding me via the social media below:</p>
     <ul>

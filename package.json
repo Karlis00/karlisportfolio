@@ -17,9 +17,9 @@
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "method-override": "^3.0.0",
+    "mongoose": "^6.6.5",
     "morgan": "^1.10.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Karlis00/assignment1.git"

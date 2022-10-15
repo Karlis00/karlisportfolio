@@ -33,7 +33,7 @@ exports.render = function(req, res) {
     
 };
 
-module.exports.renderEditPage = (req, res, next) => {
+exports.renderEditPage = function (req, res, next) {
     if (req.session.lastVisit) {
         console.log(req.session.lastVisit);
     }
@@ -56,7 +56,7 @@ module.exports.renderEditPage = (req, res, next) => {
             })  
         }
     })
-}
+};
 
 exports.edit = function(req, res, next) {
         
@@ -96,3 +96,20 @@ exports.edit = function(req, res, next) {
     });
     
 };
+
+exports.delete = (req, res, next) => {
+    let id = req.params.id;
+
+    Contact.remove({_id: id}, (err) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+             res.redirect('/business');
+        }
+    });
+}
+

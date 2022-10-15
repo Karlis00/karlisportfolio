@@ -15,5 +15,5 @@ module.exports = function(app) {
     app.get('/business', business.render);
     app.get('/business/edit/:id', business.renderEditPage);
     app.post('/business/edit/:id', business.edit);
-    // app.get('/business/delete/:id', business.delete);
+    app.get('/business/delete/:id', business.delete);
     };

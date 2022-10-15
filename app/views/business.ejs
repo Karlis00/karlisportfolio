@@ -28,7 +28,16 @@ Date: October 14, 2022
                         <td class="text-center col-2"><%= ContactList[count].name %></td>
                         <td class="text-center col-2"><%= ContactList[count].tel %></td>
                         <td class="text-center col-1"><%= ContactList[count].email %></td>
-
+                        <td class="text-center col-1">
+                            <a href="/business/edit/<%= ContactList[count]._id %>">
+                                <i>Edit</i>
+                            </a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/business/delete/<%= ContactList[count]._id %>">
+                                <i>Delete</i>
+                            </a>
+                        </td>
                     </tr>
                 <% } %>
             </table>

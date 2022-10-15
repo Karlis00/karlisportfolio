@@ -1,0 +1,62 @@
+<% /* 
+COMP 229 Assignment 2 - edit.ejs
+Student Name: Kam Hung Chan (Karlis)
+ID: 301232477
+Date: October 14, 2022
+*/ %>
+
+<%- include('../partials/head'); %>
+
+<body>
+
+    <%- include('../partials/header'); %>
+
+    <div class="content">
+    <h1><%=page%></h1>
+    <form class="form" method="POST">
+        <div class="form-group">
+            <label for="nameTextField">Contact Name</label>
+            <input type="text" class="form-control"
+            id="nameTextField"
+            placeholder="Enter contact name"
+            name="name" 
+            value="<%= contact.name %>"
+            required>
+        </div>
+
+        <div>
+        <p>
+            <label for="authorTextField">Contact Number</label>
+            <input type="number" class="form-control"
+            id="telTextField"
+            placeholder="Enter contact number"
+            name="author" 
+            value="<%= contact.tel %>"
+            required>
+        </p>
+        </div>
+
+        <div class="form-group">
+        <p>
+            <label for="publishedTextField">Email</label>
+            <input type="text" class="form-control"
+            id="publishedTextField"
+            placeholder="Enter email address"
+            name="published" 
+            value="<%= contact.email %>"
+            required>
+        <p>
+        </div>
+        <p>
+        <button class="btn btn-primary" type="submit">
+            <i class="fas fa-edit"></i> Submit</button>
+        
+            <a href="/business" class="btn btn-warning">
+                <i class="fas fa-undo"></i> Cancel</a>
+        </p>
+    </form>
+    <%- include('../partials/footer'); %>
+    </div>
+
+</body>
+</html>

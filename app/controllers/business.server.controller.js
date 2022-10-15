@@ -32,4 +32,67 @@ exports.render = function(req, res) {
     });
     
 };
+
+module.exports.renderEditPage = (req, res, next) => {
+    if (req.session.lastVisit) {
+        console.log(req.session.lastVisit);
+    }
+    req.session.lastVisit = new Date();
+
+    let id = req.params.id;
+
+    Contact.findById(id, (err, contactToEdit) => {
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            res.render('business/edit', {
+                title: "Kam's Portfolio",
+                page: 'Edit Contact List',
+                contact: contactToEdit
+            })  
+        }
+    })
+}
+
+exports.edit = function(req, res, next) {
+        
+    let id = req.params.id;
+
+    let updateContact = Contact({
+        "_id": id,
+        "name": req.body.name,
+        "tel": req.body.tel,
+        "email": req.body.email
+    });
+
+    Contact.updateOne({_id: id}, updateContact, (err) => {
+        if(err) {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            res.redirect('/business');
+        }
+    });
+
+    Contact.find((err, contactList) => {
+        if(err)
+        {
+            return console.error(err);
+        }
+        else
+        {
+            res.render('business', {
+                title: "Kam's Portfolio",
+                page: 'Business Contact List', 
+                ContactList: contactList
+            });            
+        }
+    });
     
+};

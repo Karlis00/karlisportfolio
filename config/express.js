@@ -5,14 +5,20 @@ ID: 301232477
 Date: October 2, 2022
 */
 
-var config = require('./env/development'),
-session = require('express-session'),
+let config = require('./env/development'),
 express = require('express'),
 morgan = require('morgan'),
 compress = require('compression'),
 bodyParser = require('body-parser'),
 methodOverride = require('method-override');
 const { defaultConfiguration } = require('../server.js');
+
+// modules for authentication
+let session = require('express-session'),
+passport = require('passport'),
+passportLocal = require('passport-local'),
+localStrategy = passportLocal.Strategy,
+flash = require('connect-flash');
 
 // database setup
 let mongoose = require('mongoose');
@@ -42,13 +48,35 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(methodOverride());
 
+//setup express session
 app.use(session({
-    saveUninitialized: true,
-    resave: true,
+    saveUninitialized: false,
+    resave: false,
     secret: config.sessionSecret
 }));
 
-// order matters
+//intialize flash
+app.use(flash());
+
+//intialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//passport user config
+
+//create a User Model Instance
+let userModel = require('../app/models/users');
+let User = userModel.User;
+
+//implement a user auth strategy
+passport.use(User.createStrategy());
+
+//serialize and deserialize user information
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+// set view path
 app.set('views', './app/views');
 app.set('view engine', 'ejs');
 

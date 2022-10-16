@@ -13,6 +13,8 @@ exports.render = function(req, res) {
     //to render the contact.ejs in views folder
     res.render('contact', {
         title: "Kam's Portfolio",
+        login: req.isAuthenticated(),   
+        username: req.body.username,    
         page: "Contact Me", 
         img: "img/email.png",
         imgAlt: "An Email Picture"

@@ -13,6 +13,8 @@ exports.render = function(req, res) {
     //to render the index.ejs in views folder
     res.render('index', {
         title: "Kam's Portfolio",
+        login: req.isAuthenticated(),
+        username: req.body.username,
         statement: "State The Problem. Solve The Problem.", 
         img: "img/rings.gif",
         imgAlt: "Rings of problem stating and solving"

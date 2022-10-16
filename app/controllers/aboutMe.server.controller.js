@@ -14,6 +14,8 @@ exports.render = function(req, res) {
     //to render the aboutme.ejs in views folder
     res.render('aboutme', {
         title: "Kam's Portfolio",
+        login: req.isAuthenticated(),
+        username: req.params.username,
         page: "About Me", 
         img: "img/profilepic.jpg",
         imgAlt: "My Profile Picture"

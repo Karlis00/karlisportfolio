@@ -20,7 +20,9 @@ exports.render = function(req, res) {
         serviceIcon3: "img/dmarketing.png",
         serviceAlt1: "Icon of Coding",
         serviceAlt2: "Icon of IT Support",
-        serviceAlt3: "Icon of Digital Marketing"
+        serviceAlt3: "Icon of Digital Marketing",
+        login: req.isAuthenticated(),
+        username: req.body.username,
     });
     };
     

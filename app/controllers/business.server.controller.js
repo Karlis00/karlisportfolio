@@ -25,6 +25,8 @@ exports.render = function(req, res) {
 
             res.render('business', {
                 title: "Kam's Portfolio",
+                login: req.isAuthenticated(),
+                username: req.body.username,
                 page: 'Business Contact List', 
                 ContactList: contactList
             });            

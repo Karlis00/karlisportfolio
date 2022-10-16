@@ -12,6 +12,14 @@ Date: October 2, 2022
         <li><a href="/projects">Projects</a></li>
         <li><a href="/services">Services</a></li>
         <li><a href="/contact">Contact</a></li>
-        <li><a href="/login">Log In</a></li>
+        
+            <% if(!login) { %>
+                <li><a href="/login">Log In</a></li>
+            <%} else {%>
+                <li><a href="/business">Business</a></li>
+                <li><a href="/logout">Logout</a></li>
+            <%}%>
+        
+        </li>
     </ul>
 </nav>

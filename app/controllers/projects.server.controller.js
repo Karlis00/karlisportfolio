@@ -15,6 +15,8 @@ exports.render = function(req, res) {
     res.render('projects', {
         title: "Kam's Portfolio",
         page: "Projects", 
+        login: req.isAuthenticated(),
+        username: req.body.username,
         projectImg1: "img/Project1.png",
         projectImg2: "img/Project2.png",
         projectImg3: "img/Project3.png",

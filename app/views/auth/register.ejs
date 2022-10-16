@@ -1,0 +1,49 @@
+<% /* 
+COMP 229 Assignment 2 - register.ejs
+Student Name: Kam Hung Chan (Karlis)
+ID: 301232477
+Date: October 14, 2022
+*/ %>
+
+<%- include('../partials/head'); %>
+
+<body>
+    <%- include('../partials/header'); %>
+    <div class="content">
+    <h1><%=page%></h1>
+    <!--Message Area-->
+    <% if(messages.length > 0) { %>
+    <div class="alert alert-danger">
+       
+    </div>
+    <% } %>
+        <form class="form" method="POST" autocomplete="off">
+            <p>
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" required="required" />
+            </p>
+
+            <p>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required="required" />
+            </p>
+
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required="required" />
+            </p>
+
+            <p>
+                <label for="displayName">Display Name: </label>
+                <input type="text" id="displayName" name="displayName" required="required" />
+            </p>
+            <%=messages%>
+            <input type="submit" id="submit" value="Register" />
+        </form>
+        
+
+        <%- include('../partials/footer'); %>
+
+    </div>
+</body>
+</html>

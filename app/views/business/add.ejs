@@ -1,8 +1,8 @@
 <% /* 
-COMP 229 Assignment 2 - edit.ejs
+COMP 229 Assignment 2 - add.ejs
 Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
-Date: October 14, 2022
+Date: October 16, 2022
 */ %>
 
 <%- include('../partials/head'); %>
@@ -19,7 +19,7 @@ Date: October 14, 2022
             <input type="text" 
             id="name"
             name="name" 
-            value="<%=contact.name%>"
+            value=""
             required>
         </div>
 
@@ -29,7 +29,7 @@ Date: October 14, 2022
             <input type="number" 
             id="tel"
             name="tel" 
-            value="<%=contact.tel%>"
+            value=""
             required>
         </p>
         </div>
@@ -39,15 +39,16 @@ Date: October 14, 2022
             <label for="email">Email</label>
             <input type="text" id="email"
             name="email"
-            value="<%=contact.email%>"
+            value=""
             required>
         <p>
         </div>
         <p>
         <input type="submit" value="Submit"/>
-        <div class="cancel"> 
-            <a href="/business">Cancel</a>
-        </div> 
+        
+        <div class="cancel">    
+            <a href="/business">Cancel </a>
+        </div>
         </p>
     </form>
     <%- include('../partials/footer'); %>

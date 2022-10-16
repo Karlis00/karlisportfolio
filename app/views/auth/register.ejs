@@ -11,14 +11,12 @@ Date: October 15, 2022
     <%- include('../partials/header'); %>
     <div class="content">
     <h1><%=page%></h1>
-    <!--Message Area-->
-    <% if(messages.length > 0) { %>
-    <div class="alert alert-danger">
-       
-    </div>
-    <% } %>
+    <p>Please fill in all the information to create an account.</p>
+
         <form class="form" method="POST" autocomplete="off">
             <fieldset class="userCard">
+                <legend>Create Account</legend>
+
             <p>
                 <label for="username">Username: </label>
                 <input type="text" id="username" name="username" required="required" />
@@ -40,9 +38,11 @@ Date: October 15, 2022
             </p>
 
             <input type="submit" id="submit" value="Register" />
+            <% if(messages.length > 0) { %>
             <div class="alert">
                 <%=messages%>
-                </div>
+            </div>
+            <% } %>
         </fieldset>
         </form>
         

@@ -2,11 +2,11 @@
 COMP 229 Assignment 2 - business.server.controller.js
 Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
-Date: October 15, 2022
+Update Date: October 16, 2022
 */
 var Contact = require('../models/business');
 
-exports.render = function(req, res) {
+module.exports.render = function(req, res) {
     if (req.session.lastVisit) {
         console.log(req.session.lastVisit);
     }
@@ -25,7 +25,6 @@ exports.render = function(req, res) {
             res.render('business', {
                 title: "Kam's Portfolio",
                 login: req.isAuthenticated(),
-                username: req.body.username,
                 page: 'Business Contact List', 
                 logo: "img/logo.png",
                 ContactList: contactList
@@ -35,7 +34,7 @@ exports.render = function(req, res) {
     
 };
 
-exports.renderEditPage = function (req, res, next) {
+module.exports.renderEditPage = function (req, res, next) {
     if (req.session.lastVisit) {
         console.log(req.session.lastVisit);
     }
@@ -55,7 +54,6 @@ exports.renderEditPage = function (req, res, next) {
                 title: "Kam's Portfolio",
                 page: 'Edit Contact List',
                 login: req.isAuthenticated(),
-                username: req.body.username,
                 logo: "/img/logo.png",
                 contact: contactToEdit
             })  
@@ -63,7 +61,7 @@ exports.renderEditPage = function (req, res, next) {
     })
 };
 
-exports.edit = function(req, res, next) {
+module.exports.edit = function(req, res, next) {
         
     let id = req.params.id;
 
@@ -84,28 +82,10 @@ exports.edit = function(req, res, next) {
             res.redirect('/business');
         }
     });
-
-    // Contact.find((err, contactList) => {
-    //     if(err)
-    //     {
-    //         return console.error(err);
-    //     }
-    //     else
-    //     {
-    //         res.render('business', {
-    //             title: "Kam's Portfolio",
-    //             page: 'Business Contact List', 
-    //             login: req.isAuthenticated(),
-    //             username: req.body.username,
-    //             logo: "/img/logo.png",
-    //             ContactList: contactList
-    //         });            
-    //     }
-    // });
     
 };
 
-exports.delete = (req, res, next) => {
+module.exports.delete = (req, res, next) => {
     let id = req.params.id;
 
     Contact.remove({_id: id}, (err) => {
@@ -121,3 +101,39 @@ exports.delete = (req, res, next) => {
     });
 }
 
+module.exports.renderAddPage = (req, res, next) => {
+    if (req.session.lastVisit) {
+        console.log(req.session.lastVisit);
+    }
+    req.session.lastVisit = new Date();
+
+    let id = req.params.id;
+    res.render('business/add', {
+        title: "Kam's Portfolio",
+        page: 'Add Contact List',
+        login: req.isAuthenticated(),
+        logo: "/img/logo.png",
+    })            
+}
+
+module.exports.add = (req, res, next) => {
+    let newContact = Contact({
+        "name": req.body.name,
+        "tel": req.body.tel,
+        "email": req.body.email
+    });
+
+    Contact.create(newContact, (err, Contact) =>{
+        if(err)
+        {
+            console.log(err);
+            res.end(err);
+        }
+        else
+        {
+            // refresh the business page
+            res.redirect('/business');
+        }
+    });
+
+}

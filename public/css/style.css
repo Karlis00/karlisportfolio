@@ -174,6 +174,7 @@ a:hover {
 .list {
     font-size: small;
     text-align: center;
+    margin-top: 100px;
 }
 
 .list th{
@@ -208,7 +209,31 @@ footer {
     padding-top: 10px;
     padding-right: 10px;
 }
+.addContact {
+    margin: 0;
+    float:right;
+    border: #b09ead 1px solid;
+    border-radius: 20px;
+    font-size: small;
+    padding: 5px;
+}
+.addContact:hover {
+    background-color: #23262d;
+}
+.addButton {
+    width: 35px;
+    margin-left: 22px;    
+    margin-top: 5px;
+}
 
+.cancel {
+    float: right;
+    margin-right: 10px;
+    border:#FFFFFF solid 1px;
+    border-radius: 3px;
+    padding: 2px 5px;
+    font-size: small;
+}
 @media (min-width: 600px) {
     #logo {
         width: 300px;

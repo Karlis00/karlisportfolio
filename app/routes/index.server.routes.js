@@ -37,5 +37,6 @@ module.exports = function(app) {
     app.get('/business/edit/:id',requireAuth, business.renderEditPage);
     app.post('/business/edit/:id',requireAuth, business.edit);
     app.get('/business/delete/:id',requireAuth, business.delete);
-
+    app.get('/business/add',requireAuth, business.renderAddPage);
+    app.post('/business/add',requireAuth, business.add);
     };

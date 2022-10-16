@@ -1,3 +1,10 @@
+/*
+COMP 229 Assignment 2 - index.server.routes.js
+Student Name: Kam Hung Chan (Karlis)
+ID: 301232477
+Update Date: October 15, 2022
+*/
+
 function requireAuth(req, res, next)
 {
     //check if the user is logged in

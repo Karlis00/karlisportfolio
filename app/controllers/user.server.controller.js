@@ -25,6 +25,7 @@ exports.loginRender = function(req, res, next) {
             res.render('login', {
                 title: "Kam's Portfolio",
                 page: "Log In",
+                logo: "img/logo.png",
                 login: req.isAuthenticated(),
                 username: req.body.username,
                 messages: req.flash('loginMessage'),
@@ -73,6 +74,7 @@ exports.registerRender = function(req, res, next) {
                 res.render('auth/register', {
                     title: "Kam's Portfolio",
                     page: "Register",
+                    logo: "img/logo.png",
                     login: req.isAuthenticated(),
                     username: req.body.username,
                     messages: req.flash('registerMessage'),
@@ -107,6 +109,7 @@ exports.registerProcess = function(req, res, next) {
        return res.render('auth/register',{
         title: "Kam's Portfolio",
         page: "Register",
+        logo: "img/logo.png",
         login: req.isAuthenticated(),
         username: req.body.username,
         messages: req.flash('registerMessage'),

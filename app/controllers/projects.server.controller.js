@@ -1,8 +1,8 @@
 /*
-COMP 229 Assignment 1 - projects.server.controller.js
+COMP 229 Assignment 2 - project.server.controller.js
 Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
-Date: October 2, 2022
+Update Date: October 15, 2022
 */
 
 exports.render = function(req, res) {
@@ -20,6 +20,7 @@ exports.render = function(req, res) {
         projectImg1: "img/Project1.png",
         projectImg2: "img/Project2.png",
         projectImg3: "img/Project3.png",
+        logo: "img/logo.png",
         projectAlt1: "Screenshot of ongoing education application: Nexxus",
         projectAlt2: "Screenshot of Real Estate Website Demo",
         projectAlt3: "Screenshot of Mobile Services Website Demo"

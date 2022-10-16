@@ -2,7 +2,7 @@
 COMP 229 Assignment 2 - business.server.controller.js
 Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
-Date: October 14, 2022
+Date: October 15, 2022
 */
 var Contact = require('../models/business');
 
@@ -21,13 +21,13 @@ exports.render = function(req, res) {
         }
         else
         {
-            //console.log(BookList);
 
             res.render('business', {
                 title: "Kam's Portfolio",
                 login: req.isAuthenticated(),
                 username: req.body.username,
                 page: 'Business Contact List', 
+                logo: "img/logo.png",
                 ContactList: contactList
             });            
         }
@@ -54,6 +54,9 @@ exports.renderEditPage = function (req, res, next) {
             res.render('business/edit', {
                 title: "Kam's Portfolio",
                 page: 'Edit Contact List',
+                login: req.isAuthenticated(),
+                username: req.body.username,
+                logo: "/img/logo.png",
                 contact: contactToEdit
             })  
         }
@@ -82,20 +85,23 @@ exports.edit = function(req, res, next) {
         }
     });
 
-    Contact.find((err, contactList) => {
-        if(err)
-        {
-            return console.error(err);
-        }
-        else
-        {
-            res.render('business', {
-                title: "Kam's Portfolio",
-                page: 'Business Contact List', 
-                ContactList: contactList
-            });            
-        }
-    });
+    // Contact.find((err, contactList) => {
+    //     if(err)
+    //     {
+    //         return console.error(err);
+    //     }
+    //     else
+    //     {
+    //         res.render('business', {
+    //             title: "Kam's Portfolio",
+    //             page: 'Business Contact List', 
+    //             login: req.isAuthenticated(),
+    //             username: req.body.username,
+    //             logo: "/img/logo.png",
+    //             ContactList: contactList
+    //         });            
+    //     }
+    // });
     
 };
 
@@ -110,7 +116,7 @@ exports.delete = (req, res, next) => {
         }
         else
         {
-             res.redirect('/business');
+            res.redirect('/business');
         }
     });
 }

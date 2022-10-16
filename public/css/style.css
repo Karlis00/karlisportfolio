@@ -131,7 +131,6 @@ a:hover {
     border-image: linear-gradient(158deg, #B1C1E5, #ae583d) 1;
     padding: 30px;
     margin-bottom: 20px;
-
 }
 
 #project .card img {
@@ -148,11 +147,66 @@ a:hover {
     color: #ae583d;
 }
 
+#project .card {
+    width: 600px;
+    height: 400px;
+    text-align: left;
+    border: solid 1px;
+    border-image: linear-gradient(158deg, #B1C1E5, #ae583d) 1;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.userCard {
+    width: 500px;
+    text-align: left;
+    border: solid 1px;
+    border-image: linear-gradient(158deg, #B1C1E5, #ae583d) 1;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.textAlign {
+    text-align: center;
+    font-size: x-small;
+}
+
+.list {
+    font-size: small;
+    text-align: center;
+}
+
+.list th{
+    color: #b09ead;
+}
+.list .col1{
+
+    width: 200px;
+}
+.list .col2{
+    width: 400px ;
+}
+.list .col3{
+    width: 50px ;
+}
+
+.listIcon {
+    width: 30px;
+    margin: 5px;
+}
 footer {
     width: 600px;
     padding-top: 100px;
     background-color: #000000;
     font-size: xx-small;
+}
+
+.alert{
+    color: #ae583d;
+    font-size: x-small;
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 @media (min-width: 600px) {

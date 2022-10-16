@@ -1,8 +1,8 @@
 /*
-COMP 229 Assignment 1 - aboutMe.server.controller.js
+COMP 229 Assignment 2 - aboutMe.server.controller.js
 Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
-Date: October 2, 2022
+Update Date: October 15, 2022
 */
 
 exports.render = function(req, res) {
@@ -18,6 +18,7 @@ exports.render = function(req, res) {
         username: req.params.username,
         page: "About Me", 
         img: "img/profilepic.jpg",
+        logo: "img/logo.png",
         imgAlt: "My Profile Picture"
     });
     };

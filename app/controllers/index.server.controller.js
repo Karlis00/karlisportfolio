@@ -1,8 +1,8 @@
 /*
-COMP 229 Assignment 1 - index.server.controller.js
+COMP 229 Assignment 2 - index.server.controller.js
 Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
-Date: October 2, 2022
+Update Date: October 15, 2022
 */
 exports.render = function(req, res) {
     if (req.session.lastVisit) {
@@ -17,6 +17,7 @@ exports.render = function(req, res) {
         username: req.body.username,
         statement: "State The Problem. Solve The Problem.", 
         img: "img/rings.gif",
+        logo: "img/logo.png",
         imgAlt: "Rings of problem stating and solving"
     });
     };

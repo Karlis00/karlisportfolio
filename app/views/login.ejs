@@ -13,11 +13,10 @@ Date: October 14, 2022
     <h1><%=page%></h1>
     <!--Message Area-->
     <% if(messages.length > 0) { %>
-    <div class="alert alert-danger">
-        <% messages %>
-    </div>
+
     <% } %>
         <form class="form" action="" method="POST" autocomplete="off">
+            <fieldset class="userCard">
             <p>
                 <label for="username">Username: </label>
                 <input type="text" id="username" name="username" required="required" />
@@ -27,9 +26,14 @@ Date: October 14, 2022
                 <label for="password">Password: </label>
                 <input type="password" id="password" name="password" required="required" />
             </p>
-            or <a href="/register">Register Now</a>
             <input type="submit" id="submit" value="Login" />
+            <div class="alert">
+                <%=messages%>
+            </div>
+
+        </fieldset>
         </form>
+        <p class="textAlign">Don't have an account?<a href="/register"><i>Sign up</i></a></p>
 
         <%- include('partials/footer'); %>
 

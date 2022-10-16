@@ -16,26 +16,28 @@ Date: October 14, 2022
     <table class="list">
                 <!-- Header Row-->
                 <tr>
-                    <th class="text-center col-2">Contact Name</th>
-                    <th class="text-center col-2">Contact Number</th>
-                    <th class="text-center col-1">Email Address</th>
+                    <th class="col1">Contact Name</th>
+                    <th class="col1">Contact Number</th>
+                    <th class="col2">Email Address</th>
+                    <th class="col3">Edit</th>
+                    <th class="col3">Delete</th>
                 </tr>
 
                 <!-- Repeatable Template Row -->
 
                 <% for(let count = 0; count < ContactList.length; count++) { %>
-                    <tr class="d-flex">
-                        <td class="text-center col-2"><%= ContactList[count].name %></td>
-                        <td class="text-center col-2"><%= ContactList[count].tel %></td>
-                        <td class="text-center col-1"><%= ContactList[count].email %></td>
-                        <td class="text-center col-1">
+                    <tr>
+                        <td class="col1"><%= ContactList[count].name %></td>
+                        <td class="col1"><%= ContactList[count].tel %></td>
+                        <td class="col2"><%= ContactList[count].email %></td>
+                        <td class="col3">
                             <a href="/business/edit/<%= ContactList[count]._id %>">
-                                <i>Edit</i>
+                                <img class="listIcon" src="img/edit.png">
                             </a>
                         </td>
-                        <td class="text-center col-1">
+                        <td class="col3">
                             <a href="/business/delete/<%= ContactList[count]._id %>">
-                                <i>Delete</i>
+                                <img class="listIcon" src="img/delete.png">
                             </a>
                         </td>
                     </tr>

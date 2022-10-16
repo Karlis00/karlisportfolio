@@ -2,7 +2,7 @@
 COMP 229 Assignment 2 - business.js
 Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
-Update Date: October 14, 2022
+Update Date: October 15, 2022
 */
 
 let mongoose = require('mongoose');

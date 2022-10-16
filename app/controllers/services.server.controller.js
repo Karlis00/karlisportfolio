@@ -1,8 +1,8 @@
 /*
-COMP 229 Assignment 1 - services.server.controller.js
+COMP 229 Assignment 2 - services.server.controller.js
 Student Name: Kam Hung Chan (Karlis)
 ID: 301232477
-Date: October 2, 2022
+Update Date: October 15, 2022
 */
 
 exports.render = function(req, res) {
@@ -21,6 +21,7 @@ exports.render = function(req, res) {
         serviceAlt1: "Icon of Coding",
         serviceAlt2: "Icon of IT Support",
         serviceAlt3: "Icon of Digital Marketing",
+        logo: "img/logo.png",
         login: req.isAuthenticated(),
         username: req.body.username,
     });

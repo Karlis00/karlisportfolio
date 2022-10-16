@@ -1,3 +1,10 @@
+/*
+COMP 229 Assignment 2 - user.js
+Student Name: Kam Hung Chan (Karlis)
+ID: 301232477
+Update Date: October 15, 2022
+*/
+
 //require modules
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');

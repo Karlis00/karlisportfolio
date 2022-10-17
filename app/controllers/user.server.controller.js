@@ -37,7 +37,7 @@ exports.loginRender = function(req, res, next) {
         return res.redirect('/');
         }
 
-    };
+};
     
 exports.loginProcess = function(req, res, next) {
         passport.authenticate('local',
@@ -61,7 +61,7 @@ exports.loginProcess = function(req, res, next) {
         
         });
         })(req,res,next);
-}
+};
 
 exports.registerRender = function(req, res, next) {
         if (req.session.lastVisit) {
@@ -85,7 +85,7 @@ exports.registerRender = function(req, res, next) {
             {
             return res.render('/');
             }
-        };
+};
 
 exports.registerProcess = function(req, res, next) {
     // instantiate a user object
@@ -127,7 +127,7 @@ exports.registerProcess = function(req, res, next) {
     }
 
 })
-}
+};
 
 exports.logoutProcess = function (req, res, next) {
     req.logout((err)=>{
@@ -135,4 +135,4 @@ exports.logoutProcess = function (req, res, next) {
     });
     res.redirect('/');
 
-}
+};

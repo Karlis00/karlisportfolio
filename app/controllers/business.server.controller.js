@@ -61,6 +61,21 @@ module.exports.renderEditPage = function (req, res, next) {
     })
 };
 
+module.exports.renderAddPage = function (req, res, next) {
+    if (req.session.lastVisit) {
+        console.log(req.session.lastVisit);
+    }
+    req.session.lastVisit = new Date();
+
+    let id = req.params.id;
+    res.render('business/add', {
+        title: "Kam's Portfolio",
+        page: 'Add Contact List',
+        login: req.isAuthenticated(),
+        logo: "/img/logo.png",
+    })            
+};
+
 module.exports.edit = function(req, res, next) {
         
     let id = req.params.id;
@@ -85,7 +100,7 @@ module.exports.edit = function(req, res, next) {
     
 };
 
-module.exports.delete = (req, res, next) => {
+module.exports.delete = function (req, res, next) {
     let id = req.params.id;
 
     Contact.remove({_id: id}, (err) => {
@@ -99,24 +114,9 @@ module.exports.delete = (req, res, next) => {
             res.redirect('/business');
         }
     });
-}
+};
 
-module.exports.renderAddPage = (req, res, next) => {
-    if (req.session.lastVisit) {
-        console.log(req.session.lastVisit);
-    }
-    req.session.lastVisit = new Date();
-
-    let id = req.params.id;
-    res.render('business/add', {
-        title: "Kam's Portfolio",
-        page: 'Add Contact List',
-        login: req.isAuthenticated(),
-        logo: "/img/logo.png",
-    })            
-}
-
-module.exports.add = (req, res, next) => {
+module.exports.add = function (req, res, next) {
     let newContact = Contact({
         "name": req.body.name,
         "tel": req.body.tel,
@@ -136,4 +136,4 @@ module.exports.add = (req, res, next) => {
         }
     });
 
-}
+};

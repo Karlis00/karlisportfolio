@@ -30,7 +30,7 @@ module.exports.render = function(req, res) {
                 ContactList: contactList
             });            
         }
-    });
+    }).sort({"name":1});
     
 };
 

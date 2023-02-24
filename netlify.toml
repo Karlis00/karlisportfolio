@@ -1,5 +1,5 @@
 [build]
-  command = "parcel build src/index.html --out-dir dist"
+  command = "parcel build app/views/index.ejs --out-dir dist"
   publish = "dist/"
 
 [dev]

@@ -2,12 +2,12 @@
   "name": "karlisportfolio",
   "version": "1.0.0",
   "description": "COMP 229 Assignment1",
-  "main": "build/index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "startApp": "nodemon -e * server.js",
     "start": "node index.js",
-    "build": "parcel build src/index.html"
+    "build": "parcel build app/views/index.ejs"
   },
   "author": "Kam Hung Chan 301232477",
   "license": "ISC",

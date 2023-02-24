@@ -1,7 +1,21 @@
 [build]
-  # This will be run the site build
-  command = "netlify functions:build"
-  # This is the directory is publishing to netlify's CDN
-  publish = "build"
-  # functions build directory
-  functions = "functions"
+  command = "npm run build"
+  publish = "dist"
+
+[dev]
+  command = "npm start"
+
+[[plugins]]
+  package = "netlify-plugin-inline-functions-env"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  DATABASE_URL = "your-database-url"
+
+[context.branch-deploy]
+  command = "npm run build"
+  publish = "dist"
+
+[context.deploy-preview]
+  command = "npm run build"
+  publish = "dist"

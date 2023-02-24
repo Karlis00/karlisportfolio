@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "startApp": "nodemon -e * server.js",
     "start": "node index.js",
-    "build": "parcel build server.js"
+    "build": "netlify functions:build"
   },
   "author": "Kam Hung Chan 301232477",
   "license": "ISC",

@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "startApp": "nodemon -e * server.js",
     "start": "node index.js",
-    "build": "npm run build-assets"
+    "build": "parcel build build/index.html"
   },
   "author": "Kam Hung Chan 301232477",
   "license": "ISC",
@@ -41,6 +41,8 @@
     "@types/passport": "^1.0.11",
     "@types/passport-local": "^1.0.34",
     "@types/passport-local-mongoose": "^6.1.1",
-    "parcel": "^2.8.3"
+    "parcel": "^2.8.3",
+    "parcel-bundler": "^1.12.5",
+    "webpack-cli": "^5.0.1"
   }
 }
